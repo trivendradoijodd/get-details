@@ -71,5 +71,3 @@ export const matchItem = (string, data) => {
   }
   return { name: "unknown", version: 0 };
 };
-
-
