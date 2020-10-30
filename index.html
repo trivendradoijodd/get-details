@@ -6,7 +6,12 @@
 	<title>Get Details</title>
 </head>
 <body>
-	
+	<div id="root">
+        <div id="os"></div>
+        <div id="browser"></div>
+        <div id="userAgent"></div>
+
+    </div>
 </body>
 
 <script>
@@ -84,10 +89,13 @@ function matchItem(string, data) {
 }
 
 
-var myAgent = header.join(' ');
-var myOS = this.matchItem(myAgent, os);
-var myBrowser = this.matchItem(myAgent, browser);
+var myUserAgent = header.join(' ');
+var myOS = this.matchItem(myUserAgent, os);
+var myBrowser = this.matchItem(myUserAgent, browser);
 
-console.log(myAgent, myOS, myBrowser)
+console.log(myUserAgent, myOS, myBrowser)
+document.getElementById("os").innerHTML = myOS.name
+document.getElementById("browser").innerHTML = myBrowser.name
+document.getElementById("userAgent").innerHTML = myUserAgent
 </script>
 </html>
