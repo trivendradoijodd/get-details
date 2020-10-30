@@ -30,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <>
+                <h1 style={{ textAlign: "center" }}>Get User Details</h1>
         <Card>
           <b>User Agent</b>
           <p>{this.state.userAgent}</p>
