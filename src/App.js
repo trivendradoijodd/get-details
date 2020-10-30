@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import "./styles.css";
 import { header, browser, os, matchItem } from "./utils/helper";
+import styled from "styled-components";
+
+const Card = styled.div`
+  border: 3px solid;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 3px 5px black;
+`;
 
 class App extends Component {
   state = {
@@ -21,15 +30,16 @@ class App extends Component {
   render() {
     return (
       <>
-        <div>
-          <b>User Agent</b> {this.state.userAgent}
-        </div>
-        <div>
+        <Card>
+          <b>User Agent</b>
+          <p>{this.state.userAgent}</p>
+        </Card>
+        <Card>
           <b>OS</b> {this.state.operatingSystem?.name}
-        </div>
-        <div>
+        </Card>
+        <Card>
           <b>Browser</b> {this.state.browser?.name}
-        </div>
+        </Card>
       </>
     );
   }
